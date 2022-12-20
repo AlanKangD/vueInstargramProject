@@ -1,6 +1,6 @@
 <template>
-  <div v-for="(a, i) in data" :key="i">
-    <POST :a="a"/>
+  <div >
+    <POST :a="a" v-for="(a, i) in data" :key="i"/>
   </div>
 </template>
 
