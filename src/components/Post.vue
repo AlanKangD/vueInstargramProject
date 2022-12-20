@@ -1,10 +1,10 @@
 <template>
     <div class="post">
         <div class="post-header">
-        <div class="profile"></div>
+        <div class="profile" :style="{backgroundImage : `url(${a.userImage})`}"></div>
         <span class="profile-name">{{ a.name }}</span>
         </div>
-        <div class="post-body"></div>
+        <div class="post-body" :style="{ backgroundImage : `url(${a.postImage})`}"></div>
         <div class="post-content">
         <p>{{ a.likes }} Likes</p>
         <p><strong>{{ a.name }}</strong> {{ a.content }}</p>
@@ -17,7 +17,7 @@
 export default {
     name : 'post',
     props : {
-        a : Array,
+        a : Object,
     }
 
 }
